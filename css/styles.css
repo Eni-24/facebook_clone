@@ -1,3 +1,8 @@
-.header__left >.logo{
-    max-width: 10px;
+.header__left > .logo{
+    width: 40px;
+    height: 40px;
+}
+.header__left > .search{
+    width: 40px;
+    height: 40px;
 }
