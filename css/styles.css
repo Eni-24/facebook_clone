@@ -2,7 +2,7 @@
     width: 40px;
     height: 40px;
 }
-.header__left > .search{
-    width: 40px;
-    height: 40px;
+.header__left > .header__input > .search{
+    width: 15px;
+    height: 15px;
 }
