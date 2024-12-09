@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./images/facebook_favicon.png" type="image/x-icon">
@@ -23,16 +30,24 @@
         </div>
         <div class="header__center">
             <div class="header__options">
-                <i class="house fa-solid fa-house option"></i>
+                <i class="house fa-solid fa-house option">
+                    <span class="tooltiptext">Home</span>
+                </i>
             </div>
             <div class="header__options"> 
-                <i class="fa-solid fa-user-group option"></i>
+                <i class="fa-solid fa-user-group option">
+                    <span class="tooltiptext">Friends</span>
+                </i>
             </div>
             <div class="header__options">
-                <i class="fa-brands fa-youtube option"></i>
+                <i class="fa-brands fa-youtube option">
+                    <span class="tooltiptext">Video</span>
+                </i>
             </div>
             <div class="header__options">
-                <i class="fa-solid fa-shop option"></i>
+                <i class="fa-solid fa-shop option">
+                    <span class="tooltiptext">Marketplace</span>
+                </i>
             </div>
             </div>
         </div>
