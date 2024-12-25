@@ -1,137 +1,235 @@
 .header {
     display: flex;
-    padding: 15px 20px;
+    padding: 15px 10px;
     justify-content: space-between;
-    background-color: white ;
+    background-color: #fff;
     position: sticky;
     z-index: 100;
     top: 0;
-    box-shadow: 0px 5px 8px -9px rgba(0,0,0,0.75);
-    height: 60px;
-
+    box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+    height: 30px;
 }
+
 .header__left {
     display: flex;
-justify-content: space-between ;
-align-items: center;
-
+    align-items: center;
+  justify-content: center;
 }
+
 .header__left > .logo {
-    height:40px;
-    
+    height: 40px;
+    cursor: pointer;
 }
-
 
 .header__input {
-display: flex;
-align-items: center;
-background-color: #eff2f5;
-border-radius: 999px;
-margin: 10px;
-padding: 10px;
+   display: flex;
+   align-items: center;
+   background-color: #eff2f5;
+   border-radius: 999px;
+   margin: 10px;
+   padding: 10px; 
 }
 
-.header__input > input{
+.header__input > input {
     border: none;
     background-color: transparent;
-
+    outline-width: 0;
 }
 
 .search {
-    width: 15px;
     height: 15px;
-    
 }
-.logo {
 
-}
 .header__center {
     display: flex;
     justify-content: center;
     flex: 1;
-    
 }
 
-.header__options{
-    color: grey;
+
+.header__option {
+    color: gray;
     display: flex;
-    align-items: center;
     padding: 0 30px;
+    align-items: center;
     position: relative;
 }
-.header__options .tooltiptext{
-    background-color: #0a0f0f;
+
+.header__option .tooltiptext {
+    visibility: hidden;
     width: 120px;
-    color: white;
+    background-color: #000;
+    color: #fff;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 6px;
     top: 40px;
     margin-left: -70px;
-    padding: 5px 0px;
+    padding: 5px 0;
     font-size: 14px;
     position: absolute;
     z-index: 1;
-    visibility: hidden;
-
 }
-.header__options:hover .tooltiptext {
+
+.header__option:hover .tooltiptext {
     visibility: visible;
+  }
+
+
+
+.header__option > .option__icon {
+    cursor: pointer;
 }
 
-
-.header__options>.house {
+.header__option .active {
     color: #2e81f4;
-}
-.header__options > .option {
-cursor: pointer;
+    position: relative;
 
 }
 
-.header__options:hover {
+.header__option:hover {
     background-color: #eff2f5;
-    border-radius: 7px;
+    border-radius: 10px;
     align-items: center;
-    padding: 20px 30px;
-}
+    padding: 10px 30px;
+  }
 
 
-.header__right{
+.header__option .fa-house::after {
+    content: "";
+    background-color: #2e81f4;
+    width: 5rem;
+    height: 2px;
+    bottom: -22px;
+    right: -25px;
+    position: absolute;
+ 
+} 
+
+.header__right {
     display: flex;
     align-items: center;
-    /* padding: 0 20px;
+    position: relative;
+}
+
+.header__options {
+    color: gray;
+    display: flex;
+    padding: 0 10px;
     align-items: center;
-    margin-right: 10px; */
+    position: relative;
+}
 
+
+.header__options .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    top: 40px;
+    margin-left: -70px;
+    padding: 5px 0;
+    font-size: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+.header__options:hover .tooltiptext {
+    visibility: visible;
+    margin-top: 15px;
+  }
+
+.header__options > .option__icon {
+    cursor: pointer;
+}
+
+.header__options .active {
+    color: #2e81f4;
+    position: relative;
 
 }
-/* .header__right > .menu {
-    width: 20px;
-    height: 20px
+
+.header__options .fa-house::after {
+    content: "";
+    background-color: #2e81f4;
+    width: 5rem;
+    height: 2px;
+    bottom: -22px;
+    right: -25px;
+    position: absolute;
+ 
+} 
+
+.header__option .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    top: 40px;
+    margin-left: -70px;
+    padding: 5px 0;
+    font-size: 14px;
+    position: absolute;
+    z-index: 1;
 }
-.header__right >.messenger{
-    height: 30px;
+
+/* .right__icons {
+    padding: 0px 10px;
+    cursor: pointer;
+  
 } */
 
-
-/* .header__info > .user {
-padding: 0 4px;
-cursor: pointer;
+/* .header__info {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
 } */
 
-.header__right > i {
+.header__right > .header__options > .menu, .fa-facebook-messenger, .fa-bell, .fa-user {
     background-color: #eff2f5;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 5px;
     cursor: pointer;
-    margin-left: 10px;
-    height: 35px;
-    width: 35px;
+    margin-top: 2px;
 }
-    
-.header__right > i:hover {
-    background-color: #ccc; 
-      
+
+
+
+
+
+
+.header__right .menu::after {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #010101;
+    color: #fff;
 }
+
+.header__right .menu:hover {
+    background-color: #ccc;
+}
+
+/* .header__right > .right__icons:hover {
+    background-color: #ccc;
+} */
+
+.app__body {
+    display: flex;
+}
+
+.sidebar {
+    flex: 0.33;
+    padding: 25px 10px;
+}
+
+
